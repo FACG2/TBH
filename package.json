@@ -4,11 +4,11 @@
   "description": "To Be Honest is the week-8 project using express",
   "main": "index.js",
   "scripts": {
-      "testdb": "NODE_ENV=test node src/tests/database.test.js | tap-spec",
-      "testroutes":"NODE_ENV=test node src/test/routes.test.js | tap-spec ",
-      "start": "node src/index.js",
-      "start:watch": "nodemon src/index.js"
-    },
+    "testdb": "NODE_ENV=test node src/tests/database.test.js | tap-spec",
+    "testroutes": "NODE_ENV=test node src/test/routes.test.js | tap-spec ",
+    "start": "node src/index.js",
+    "start:watch": "nodemon src/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FACG2/TBH.git"
@@ -26,6 +26,7 @@
     "tape": "^4.8.0"
   },
   "dependencies": {
+    "env2": "^2.2.0",
     "express": "^4.15.4",
     "nodemon": "^1.11.0",
     "path": "^0.12.7",
