@@ -14,7 +14,6 @@ app.engine(
     layoutsDir: path.join(__dirname, 'views', 'layouts'),
     partialsDir: path.join(__dirname, 'views', 'partials'),
     defaultLayout: 'main'
-    // helpers: helpers,
   })
 );
 app.use(bodyParser.urlencoded({ extended: false }));
