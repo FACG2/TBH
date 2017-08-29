@@ -4,7 +4,7 @@ const buildDatabase = () => {
   const connection = require('./dbConnection.js');
   const sql = fs.readFileSync(`${__dirname}/build.sql`).toString();
 
-  connection.query(sql, (err, result) => {
+  connection.dbconnection.query(sql, (err, result) => {
     if (err) {
       console.log(err, 'error');
     } else {
