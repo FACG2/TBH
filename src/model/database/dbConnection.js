@@ -1,16 +1,41 @@
-const {Pool} = require('pg');
 
 require('env2')('./config.env');
-var url = '';
-if (!process.env.DB_URL) {
-  throw new Error('No DATABASE_URL provided');
+const pg = require('pg');
+
+// const herokuDB = {
+//   host: process.env.HEROKU_HOST,
+//   user: process.env.HEROKU_USER,
+//   password: process.env.PASSWORD,
+//   database: process.env.HEROKU_DB,
+//   ssl: true,
+// };
+
+const config = {
+  host: 'localhost',
+  port: 5432,
+  database: process.env.LOCAL_DB,
+  user:process.env.LOCAL_USERNAME,
+  password:process.env.LOCAL_PASSWORD
+};
+
+
+function dbconnection(config, cb) {
+    var client = new pg.Client(config);
+    client.connect(function(err) {
+        if (err) {
+            cb(err, undefined);
+            return;
+        }
+    });
+    return client;
 }
 
-if (process.env.NODE_ENV === 'test') {
-  url = process.env.TEST_URL;
-} else {
-  url = process.env.DB_URL;
-}
-const pool = new Pool({connectionString: url, ssl: true});
 
-module.exports = pool;
+
+// const connection = process.env.NODE_ENV === 'production' ? herokuDB : localDB;
+
+ // const db = new pg.Client(connection);
+module.exports =  {
+  dbconnection: dbconnection(config, function(err) {
+    }),
+  }
