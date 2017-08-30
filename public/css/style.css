@@ -1,7 +1,16 @@
 body{
-padding:0;
-margin:0;
+  padding:0;
+  margin:0;
+  background-color: #eaebed;
+  font-family: 'Titillium Web', sans-serif;
 }
+
+.container{
+  margin:0 auto;
+  width: 73%;
+}
+
+
 .navbar {
   padding: 1rem 0;
     border-left: solid 5px  #e74c3c;
@@ -28,3 +37,87 @@ footer p{
 	color: rgba(255,255,255,0.6);
 	margin-bottom: 5px;
 }
+
+/*Login,SIGN UP FORM STYLING*/
+
+.signlogup{
+  text-align: center;
+  background-color: #34495e;
+  font-size: 0;
+  margin-top: 70px;
+  padding:20px 20px;
+  width: 40%;
+  margin: 150px auto 0 auto;
+  border-radius: 10px;
+  border-bottom: 5px solid #1abc9c;
+}
+.signlogup input, .signlogup button{
+  margin: 7px auto;
+  display: block;
+
+}
+
+#login{
+  border-right: solid 1.5px white;
+  cursor: pointer;
+
+}
+#signUp{
+  cursor: pointer;
+
+}
+.usernameInput:focus {
+    background-color: #bdc3c7;
+}
+.passwordInput:focus {
+    background-color: #bdc3c7;
+}
+
+.signlogup button{
+  padding: 10px;
+  width: 25%;
+  background: #7f8c8d;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 5%;
+  font-family: 'Titillium Web', sans-serif;
+}
+ .signlogup button:hover{
+  background-color: #1abc9c;
+}
+
+.signlogup input{
+  border: none;
+width: 45%;
+padding: 10px;
+font-size: 24px;
+margin-bottom:2%;
+font-family: 'Titillium Web', sans-serif;
+
+}
+.signlogup span{
+  padding: 10px 36px;
+  background-color: #16a085;
+  margin: 0;
+  color: #fff;
+  font-size: 21px;
+}
+
+.signlogup form{
+  display: none;
+}
+
+.signlogup span:hover{
+  background-color: #1abc9c;
+}
+
+.signBar{
+  margin: 20px 0;
+}
+
+
+
+/*END*/
