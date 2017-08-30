@@ -1,0 +1,30 @@
+body{
+padding:0;
+margin:0;
+}
+.navbar {
+  padding: 1rem 0;
+    border-left: solid 5px  #e74c3c;
+    border-right: solid 5px  #e74c3c;
+    background-color: #1abc9c;
+}
+h2{
+  margin: 0 auto;
+  max-width: var(--limited-width-container);
+  padding-left: 1rem;
+  padding-right: 1rem;
+    text-align: center;
+color:white;
+font-size:30px;
+}
+footer{
+	text-align: center;
+	color: #fff;
+	background-color: #414a4f;
+	padding: 20px 15px;
+font-size:30px;
+}
+footer p{
+	color: rgba(255,255,255,0.6);
+	margin-bottom: 5px;
+}

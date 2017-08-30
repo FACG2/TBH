@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-{{> header}}
-  <body>
-    <div class="mainContent container">
-      {{{body}}}
-    </div>
-    <script type="text/javascript" src="js/script.js"></script>
-  </body>
-  {{>footer}}
+<html>
+  {{>head}}
+<body>
+
+  {{> header}}
+
+  <main class="main">
+  {{{body}}}
+  </main>
+
+  {{> footer}}
+
+  <script src="/js/main.js"></script>
+
+</body>
 </html>
