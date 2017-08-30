@@ -1,21 +1,25 @@
  const connection = require('../database/dbConnection.js');
  const getNotes = (user_id, cb) => {
+   // console.log(user_id);
    const sql = {
      text: `SELECT * FROM notes WHERE user_id = $1`,
      values: [user_id] };
+
    connection.dbconnection.query(sql, (err, res) => {
+     // console.log(res);
      if (err) {
+       // console.log('err connection', err);
        cb(err);
      } else {
        cb(null, res.rows);
      }
    });
  };
- //
- const addNote = (user_id, content, cb) => {
+
+ const addNote = (reciever_id, content, cb) => {
    const sql = {
      text: `INSERT INTO notes (user_id,content) VALUES ($1,$2)`,
-     values: [user_id, content]
+     values: [reciever_id, content]
    };
    connection.dbconnection.query(sql, (err, res) => {
      if (err) {
@@ -37,6 +41,6 @@
  // });
  module.exports = {
 
-   getNotes
-  //  addNote
+   getNotes,
+   addNote
  };
