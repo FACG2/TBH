@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "testdb": "NODE_ENV=test node src/tests/database.test.js | tap-spec",
-    "testroutes": "NODE_ENV=test node src/test/routes.test.js | tap-spec ",
+    "testroutes": "NODE_ENV=test node src/tests/routes.test.js | tap-spec ",
     "start": "node src/index.js",
     "start:watch": "nodemon src/index.js"
   },

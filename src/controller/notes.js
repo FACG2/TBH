@@ -8,15 +8,13 @@ router.get('/notes/:userId', (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      console.log(result);
-      res.render('notes.hbs', { activePage: { notes: true }, notes: result ,userId:req.params.userId});
+      res.render('notes.hbs', { activePage: { notes: true }, notes: result, userId: req.params.userId});
       //  res.redirect(`/notes/${req.params.userId}`);
-      }
+    }
   });
 });
 
 router.get('/users/:reciever_Id/addNote', (req, res) => {
-  console.log(req.params.reciever_Id);
   res.render('addNote.hbs', {reciever_Id: req.params.reciever_Id});
 });
 
@@ -25,7 +23,7 @@ router.post('/users/:reciever_id/addNote', (req, res) => {
     if (err) {
       console.log(err);
     } else {
-       res.redirect(`/notes/${req.params.reciever_id}`);
+      res.redirect(`/notes/${req.params.reciever_id}`);
     }
   });
 });
