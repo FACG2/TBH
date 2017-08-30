@@ -15,20 +15,20 @@
      }
    });
  };
- //
- // const addNote = (user_id, content, cb) => {
- //   const sql = {
- //     text: `INSERT INTO notes (user_id,content) VALUES ($1,$2)`,
- //     values: [user_id, content]
- //   };
- //   connection.dbconnection.query(sql, (err, res) => {
- //     if (err) {
- //       cb(err);
- //     } else {
- //       cb(null, res.rows);
- //     }
- //   });
- // };
+
+ const addNote = (reciever_id, content, cb) => {
+   const sql = {
+     text: `INSERT INTO notes (user_id,content) VALUES ($1,$2)`,
+     values: [reciever_id, content]
+   };
+   connection.dbconnection.query(sql, (err, res) => {
+     if (err) {
+       cb(err);
+     } else {
+       cb(null, res.rows);
+     }
+   });
+ };
  // getNotes(1,(err,res)=>{
  //   console.log(res);
  // })
@@ -41,6 +41,6 @@
  // });
  module.exports = {
 
-   getNotes
-  //  addNote
+   getNotes,
+   addNote
  };

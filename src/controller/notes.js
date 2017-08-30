@@ -13,16 +13,19 @@ router.get('/notes/:userId', (req, res) => {
   });
 });
 
-// router.post('/addNote', (req, res) => {
-//   console.log('body', req.body);
-//   notes.addNote(req.body.user_id, req.body.content, (err, result) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       console.log(result);
-//       res.render('home.hbs', {});
-//     }
-//   });
-// });
+router.get('/users/:reciever_Id/addNote', (req, res) => {
+  console.log(req.params.reciever_Id);
+  res.render('addNote.hbs', {reciever_Id: req.params.reciever_Id});
+});
+
+router.post('/users/:reciever_id/addNote', (req, res) => {
+  notes.addNote(req.params.reciever_id, req.body.content, (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+       res.redirect(`/users/${req.params.reciever_id}/addNote`);
+    }
+  });
+});
 
 module.exports = router;
