@@ -6,10 +6,10 @@ const users = require('./../model/queries/users.js');
 
 
 
-userRouter.get('/home',(req, res, next) => {
+userRouter.get('/home',(req, res) => {
   users.getUsers((err,result)=>{
     if(err){
-      next()
+      console.log(err);
     }
     else{
         res.render('home.hbs',{users:result.rows});

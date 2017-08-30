@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const controllers = require('./controller/notes.js');
+const userControllers = require('./controller/users.js');
+const routePageNotFound = require('./controller/error.js');
 const bodyParser = require('body-parser');
 const app = express();
 
@@ -16,12 +18,14 @@ app.engine(
     defaultLayout: 'main'
   })
 );
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.set('port', process.env.PORT || 4000);
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(controllers);
-
+app.use(userControllers);
+app.use(routePageNotFound);
 app.use((err, req, res, next)=>{
   res.status(err.status || 500);
   res.render('error', {
