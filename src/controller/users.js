@@ -3,26 +3,15 @@ const { Router } = express;
 const userRouter = Router();
 const users = require('./../model/queries/users.js');
 
-
-
-
-userRouter.get('/home',(req, res) => {
-  users.getUsers((err,result)=>{
-    if(err){
+userRouter.get('/home', (req, res) => {
+  users.getUsers((err, result) => {
+    if (err) {
       console.log(err);
+    } else {
+      res.render('home.hbs', {users: result.rows});
     }
-    else{
-        res.render('home.hbs',{users:result.rows});
-    }
-  })
-
+  });
 });
-
-//
-// userRouter.get('/register', (req, res) => {
-//   console.log('qqqqqqqqqqqqqqq');
-//     res.render('logSignup.hbs');
-// });
 
 //
 // userRouter.post('/register', (req, res) => {
@@ -37,4 +26,4 @@ userRouter.get('/home',(req, res) => {
 //   });
 // });
 
-module.exports= userRouter;
+module.exports = userRouter;
