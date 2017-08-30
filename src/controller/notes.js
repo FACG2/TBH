@@ -8,8 +8,10 @@ router.get('/notes/:userId', (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      res.render('notes.hbs', { activePage: { notes: true }, notes: result});
-    }
+      console.log(result);
+      res.render('notes.hbs', { activePage: { notes: true }, notes: result ,userId:req.params.userId});
+      //  res.redirect(`/notes/${req.params.userId}`);
+      }
   });
 });
 
@@ -23,7 +25,7 @@ router.post('/users/:reciever_id/addNote', (req, res) => {
     if (err) {
       console.log(err);
     } else {
-       res.redirect(`/users/${req.params.reciever_id}/addNote`);
+       res.redirect(`/notes/${req.params.reciever_id}`);
     }
   });
 });
