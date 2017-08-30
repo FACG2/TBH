@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const controllers = require('./controller/notes.js');
+const userControllers = require('./controller/users.js');
 const bodyParser = require('body-parser');
 const app = express();
 
@@ -22,5 +23,6 @@ app.use(bodyParser.json());
 app.set('port', process.env.PORT || 4000);
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(controllers);
+app.use(userControllers);
 
 module.exports = app;

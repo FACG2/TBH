@@ -1,0 +1,11 @@
+<div class="allUsers">
+     {{#each users}}
+  <a href="/notes/{{this.id}}">
+    <div class="singleuser">
+      <li class="note">
+        {{this.username}}
+      </li>
+    </div>
+  </a>
+  {{/each}}
+</div>
