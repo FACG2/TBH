@@ -1,13 +1,4 @@
  const connection = require('../database/dbConnection.js');
-
-//
-// const getNotes= (user_id) =>{
-//   const sql = {
-//     text: `SELECT * FROM notes WHERE user_id = $1`,
-//     values: [user_id] }
-//    return connection.dbconnection.query(sql);
-// }
-
  const getNotes = (user_id, cb) => {
    console.log(user_id);
    const sql = {
