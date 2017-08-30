@@ -3,12 +3,17 @@ const { Router } = express;
 const userRouter = Router();
 const users = require('./../model/queries/users.js');
 
-userRouter.get('/home', (req, res) => {
-  users.getUsers((err, result) => {
-    if (err) {
-      console.log(err);
+
+
+
+
+userRouter.get('/home',(req, res, next) => {
+  users.getUsers((err,result)=>{
+    if(err){
+      next()
     } else {
       res.render('home.hbs', {users: result.rows});
+
     }
   });
 });

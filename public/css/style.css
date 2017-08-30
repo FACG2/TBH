@@ -16,6 +16,7 @@ body{
     border-left: solid 5px  #e74c3c;
     border-right: solid 5px  #e74c3c;
     background-color: #1abc9c;
+        margin-bottom: 22px;
 }
 h2{
   margin: 0 auto;
@@ -38,86 +39,124 @@ footer p{
 	margin-bottom: 5px;
 }
 
-/*Login,SIGN UP FORM STYLING*/
+/*start style form addnote */
 
-.signlogup{
+.addNote{
+    width: 290px;
+    margin: 25px auto;
+    background-color: #e74c3c;
+    padding: 20px 20px;
+    border-radius: 3px
+}
+
+
+#addNote{
+  font-size: 0
+}
+
+.addNote{
+
+}
+
+#addnote{
+    width: 210px;
+    height: 32px;
+    border: none;
+    border-right: 1px solid #8f8e8e;
+    border-radius: 2px 0 0 2px;
+    padding-left: 4px;
+}
+
+ #addsub{
+    border: none;
+    height: 34px;
+    width: 65px;
+    background: #414a4f;
+    color: #fff;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+}
+
+
+/*end style form aanote */
+
+
+/*start style notes page*/
+
+.notes{
   text-align: center;
-  background-color: #34495e;
-  font-size: 0;
-  margin-top: 70px;
-  padding:20px 20px;
-  width: 40%;
-  margin: 150px auto 0 auto;
-  border-radius: 10px;
-  border-bottom: 5px solid #1abc9c;
-}
-.signlogup input, .signlogup button{
-  margin: 7px auto;
-  display: block;
-
 }
 
-#login{
-  border-right: solid 1.5px white;
-  cursor: pointer;
 
-}
-#signUp{
-  cursor: pointer;
-
-}
-.usernameInput:focus {
-    background-color: #bdc3c7;
-}
-.passwordInput:focus {
-    background-color: #bdc3c7;
+.notes a{
+    color: #000;
+    font-size: 19px;
+    margin-top: 30px;
+    text-decoration: none;
+    margin-top: 15px;
+    background-color: #2980b9;
+    padding: 12px;
+    border-radius: 2px;
+    transition: 0.2s;
 }
 
-.signlogup button{
-  padding: 10px;
-  width: 25%;
-  background: #7f8c8d;
-  color: white;
-  text-align: center;
-  font-size: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-  margin-top: 5%;
-  font-family: 'Titillium Web', sans-serif;
-}
- .signlogup button:hover{
-  background-color: #1abc9c;
-}
-
-.signlogup input{
-  border: none;
-width: 45%;
-padding: 10px;
-font-size: 24px;
-margin-bottom:2%;
-font-family: 'Titillium Web', sans-serif;
-
-}
-.signlogup span{
-  padding: 10px 36px;
-  background-color: #16a085;
-  margin: 0;
+.notes a:hover{
+  background-color: #3498db;
   color: #fff;
-  font-size: 21px;
-}
 
-.signlogup form{
-  display: none;
-}
-
-.signlogup span:hover{
-  background-color: #1abc9c;
-}
-
-.signBar{
-  margin: 20px 0;
 }
 
 
+ ul {
+    padding: 0 0 0 0;
 
-/*END*/
+}
+
+ ul li {
+
+    position: relative;
+    padding: 4px;
+    background: #888;
+    font-size: 19px;
+    transition: 0.2s;
+    width: 325px;
+    margin: 0 auto;
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    list-style: none;
+    text-align: center;
+    margin: 2px auto;
+}
+
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+.allUsers a{
+  text-decoration: none;
+  color: #000;
+}
+
+
+ul li:hover {
+    background: #e74c3c;
+    color: #fff
+}
+
+.allUsers h1{
+  text-align: center;
+  color: #2980b9;
+  text-transform: uppercase;
+}
+_
+
+
+/*end style notes page*/
+
+/*start not found*/
+
+
+/*End not found*/
