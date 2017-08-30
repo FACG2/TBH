@@ -9,7 +9,6 @@ router.get('/notes/:userId', (req, res) => {
       console.log(err);
     } else {
       res.render('notes.hbs', { activePage: { notes: true }, notes: result, userId: req.params.userId});
-      //  res.redirect(`/notes/${req.params.userId}`);
     }
   });
 });

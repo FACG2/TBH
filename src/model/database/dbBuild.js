@@ -1,18 +1,13 @@
+
 const fs = require('fs');
+const dbConnection = require('./dbConnection.js');
 
-const buildDatabase = () => {
-  const connection = require('./dbConnection.js');
-  const sql = fs.readFileSync(`${__dirname}/build.sql`).toString();
+const sql = fs.readFileSync(`${__dirname}/dbBuild.sql`).toString();
 
-  connection.dbconnection.query(sql, (err, result) => {
-    if (err) {
-      console.log(err, 'error');
-    } else {
-      console.log('database created');
-    }
-  });
-};
-
-buildDatabase();
-
-module.exports = buildDatabase;
+dbConnection.query(sql, (err, res) => {
+  if (err) {
+    throw err;
+  } else {
+    console.log('Building successfuly!');
+  }
+});
