@@ -25,11 +25,13 @@ TBH is a web-application that allow people to write anonymous and honest opinion
  ### Or see our **MAGIC** :boom: :fire: :
  1) Clone the repo `https://github.com/FACG2/TBH.git`
  2) Run $ npm init , $ npm install
- 3) Use your browser and jump into `localhost:4000`
+ 3) $ npm run start
+ 4) Use your browser and jump into `localhost:4000`
  
  # Stretch goals: 
  1) Add privicy, by activating the authentication step.
  2) Make the website more social media friendly. 
+ 
  
  Many **THANKS** for your time :heart::metal:
  
