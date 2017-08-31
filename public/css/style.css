@@ -163,7 +163,9 @@ main{
     word-wrap: break-word;
 }
 
-
+ul{
+padding:0;
+}
 
 ul li:nth-child(odd) {
     background: #f9f9f9;
