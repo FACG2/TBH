@@ -1,13 +1,7 @@
-const express = require('express');
-const { Router } = express;
-const userRouter = Router();
+
 const users = require('./../model/queries/users.js');
 
-
-
-
-
-userRouter.get('/home',(req, res, next) => {
+  exports.home = (req, res, next) => {
   users.getUsers((err,result)=>{
     if(err){
       next()
@@ -16,19 +10,4 @@ userRouter.get('/home',(req, res, next) => {
 
     }
   });
-});
-
-//
-// userRouter.post('/register', (req, res) => {
-//   console.log(req.body);
-//   users.register(req.body.usaname, req.body.password, (err, result) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       console.log(result);
-//        res.redirect(`/users/${req.params.reciever_id}/addNote`);
-//     }
-//   });
-// });
-
-module.exports = userRouter;
+};
