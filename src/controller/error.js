@@ -1,13 +1,15 @@
-const express = require('express');
-const { Router } = express;
-const routePageNotFound = Router();
+exports.client = (req, res) => {
+  res.status(404).render('error', {
+    layout: 'error',
+    statusCode: 404,
+    errorMessage: 'Page not found',
+  });
+};
 
-
-
-
-routePageNotFound.get('*', function(req, res){
-  res.render('pageNotFound.hbs');
-});
-
-
-module.exports= routePageNotFound;
+exports.server = (err, req, res, next) => {
+  res.status(500).render('error', {
+    layout: 'error',
+    statusCode: 500,
+    errorMessage: 'Internal server error',
+  });
+};

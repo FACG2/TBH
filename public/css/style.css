@@ -18,6 +18,9 @@ body{
     background-color: #1abc9c;
         margin-bottom: 22px;
 }
+.navbar__nav a{
+  text-decoration: none;
+}
 h2{
   margin: 0 auto;
   max-width: var(--limited-width-container);
@@ -55,7 +58,11 @@ footer p{
 }
 
 .addNote{
+  
+}
 
+main{
+  height: 100vh;
 }
 
 #addnote{
@@ -85,6 +92,9 @@ footer p{
 
 .notes{
   text-align: center;
+  height: 100vh;
+  overflow: auto;
+  padding-top: 12px;
 }
 
 
@@ -140,6 +150,10 @@ ul li:nth-child(odd) {
   color: #000;
 }
 
+.allUsers{
+  height: 100vh;
+  overflow: auto;
+}
 
 ul li:hover {
     background: #e74c3c;
