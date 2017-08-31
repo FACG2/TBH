@@ -9,7 +9,7 @@ Done by: @Qamar-93 , @mahmoudalwadia , @aajour , @Ghadeer93 :bowtie: .
 TBH is a web-application that allow people to write anonymous and honest opinions about you.
 
 
- # How to use TBH? :pray: :pray:
+ # How to use TBH? :eyes: 
 
  :one: Anyone can access home page and show all users, and can write notes for anyone then send it.
 
@@ -19,7 +19,7 @@ TBH is a web-application that allow people to write anonymous and honest opinion
 
  ![Schema for database](https://image.ibb.co/dU2YBk/databeas.png)
  
- # How to use?
+ # How to run? :key: :runner:
  ### Visit the [Link](https://thb-repo.herokuapp.com/home)
  
  ### Or see our **MAGIC** :boom: :fire: :
