@@ -18,4 +18,4 @@ any user.
 
  # TBH Analysis
 
- ![Schema for database](https://ibb.co/cg14HQ)
+ ![Schema for database](https://image.ibb.co/dU2YBk/databeas.png)
