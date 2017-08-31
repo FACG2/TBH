@@ -9,7 +9,8 @@ const error = require('./error');
 router.get('/notes/:userId', notes.notes);
 router.get('/users/:reciever_Id/addNote', notes.addNote);
 router.post('/users/:reciever_id/addNote', notes.submitAddNote);
-router.get('/home', users.home);
+router.get(['/home','/'] ,users.home);
+
 
 
 router.use(error.client);
