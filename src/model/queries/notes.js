@@ -4,7 +4,7 @@ const connection = require('../database/dbConnection.js');
      text: `SELECT * FROM notes WHERE user_id = $1`,
      values: [user_id] };
 
-   connection.dbconnection.query(sql, (err, res) => {
+   connection.query(sql, (err, res) => {
      if (err) {
        cb(err);
      } else {
@@ -18,7 +18,7 @@ const connection = require('../database/dbConnection.js');
      text: `INSERT INTO notes (user_id,content) VALUES ($1,$2)`,
      values: [reciever_id, content]
    };
-   connection.dbconnection.query(sql, (err, res) => {
+   connection.query(sql, (err, res) => {
      if (err) {
        cb(err);
      } else {
