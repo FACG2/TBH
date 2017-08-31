@@ -1,6 +1,6 @@
 <div class="addNote">
   <form id="addNote" action="/users/{{reciever_Id}}/addNote" method="post">
-    <input id="addnote" type="text" name="content" value="" placeholder="Enter tour note...." required>
+    <input id="addnote" type="text" name="content" value="" placeholder="Enter tour note...." pattern="[a-zA-Z0-9]+[a-zA-Z0-9 ]+" required>
     <input id="addsub" type="submit" name="submit" value="Send">
   </form>
 </div>
