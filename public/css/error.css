@@ -169,5 +169,15 @@ body::after {
 a{
   text-decoration: none;
   color:#fff;
+  cursor: pointer;
+    display:block;
+  width: 140px;
+  margin: 0 auto
+}
+h2{
+  cursor: pointer;
+  display:block;
+  width: 140px;
+  margin: 10px auto
 }
     

@@ -16,10 +16,12 @@ body{
     border-left: solid 5px  #e74c3c;
     border-right: solid 5px  #e74c3c;
     background-color: #1abc9c;
-        margin-bottom: 22px;
+    margin-bottom: 22px;
+    text-align: center;
 }
 .navbar__nav a{
   text-decoration: none;
+
 }
 h2{
   margin: 0 auto;
@@ -29,8 +31,10 @@ h2{
     text-align: center;
 color:white;
 font-size:30px;
+display: inline-block;
 }
 footer{
+  margin: 15px 0 0 0;
 	text-align: center;
 	color: #fff;
 	background-color: #414a4f;
@@ -39,7 +43,7 @@ font-size:30px;
 }
 footer p{
 	color: rgba(255,255,255,0.6);
-	margin-bottom: 5px;
+	margin: 0;
 }
 
 /*start style form addnote */
@@ -62,7 +66,8 @@ footer p{
 }
 
 main{
-  height: 100vh;
+  height: 79vh;
+  overflow: auto;
 }
 
 #addnote{
@@ -84,7 +89,9 @@ main{
     cursor: pointer;
 }
 
-
+#addsub:hover{
+  background-color: #58656c;
+}
 /*end style form aanote */
 
 
@@ -92,9 +99,11 @@ main{
 
 .notes{
   text-align: center;
-  height: 100vh;
-  overflow: auto;
   padding-top: 12px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 
@@ -117,9 +126,20 @@ main{
 }
 
 
- ul {
+.allUsers ul {
     padding: 0 0 0 0;
+    text-align: center;
 
+}
+
+/*.singleuser{
+  width: 332px;
+}*/
+
+ .allUsers ul a{
+  display: block;
+  margin: 0 auto;
+  width: 332px;
 }
 
  ul li {
@@ -139,7 +159,11 @@ main{
     list-style: none;
     text-align: center;
     margin: 2px auto;
+    overflow: hidden;
+    word-wrap: break-word;
 }
+
+
 
 ul li:nth-child(odd) {
     background: #f9f9f9;
